@@ -1,3 +1,4 @@
+import { Card, CardContent } from "@/components/ui/card";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Image from "next/image";
 import Link from "next/link";
@@ -73,9 +74,48 @@ export default function Home() {
         <Link href="/landscapes" className="mt-4 px-15 py-5 bg-sage text-white hover:bg-foreground transition-all rounded-xl text-3xl">view more</Link>
       </div>
 
-      <div className="py-20 border-b w-full flex flex-col items-center">
+      <div className="p-20 border-b w-full flex flex-col items-center">
         <h2 className="text-4xl text-foreground text-center py-10">aima's bio</h2>
+        <div className="row flex items-center justify-center gap-20">
+          <Image
+            src="/greenmount.jpeg"
+            alt="Painting of a green mountain"
+            width={500}
+            height={300}
+            className="w-1/2 px-10"
+          />
+          <p className="w-1/2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+            officia deserunt mollit anim id est laborum.
+          </p>
+        </div>
       </div>
+
+      <div className="p-20 border-b w-full flex flex-col items-center">
+        <h2 className="text-4xl text-foreground text-center py-10">reviews</h2>
+        <Carousel className="w-full max-w-10/12">
+          <CarouselContent className="-ml-1">
+            {Array.from({ length: 5 }).map((_, index) => (
+              <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/4">
+                <div className="p-1">
+                  <Card>
+                    <CardContent className="flex aspect-square items-center justify-center p-6">
+                      <span className="text-2xl font-semibold">{index + 1}</span>
+                    </CardContent>
+                  </Card>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious/>
+          <CarouselNext />
+        </Carousel>
+      </div>
+
     </div>
   );
 }
