@@ -5,23 +5,23 @@ import Link from "next/link";
 
 const carousel = [
   {
-    src: "/ship.jpg",
+    src: "/landscapes/ship.jpg",
     alt: "Painting of a ship",
   },
   {
-    src: "/sunset.jpeg",
+    src: "/landscapes/sunset.jpeg",
     alt: "Painting of a sunset",
   },
   {
-    src: "/sheep.jpeg",
+    src: "/landscapes/sheep.jpeg",
     alt: "Painting of sheep",
   },
   {
-    src: "/mountain.jpeg",
+    src: "/landscapes/mountain.jpeg",
     alt: "Painting of a mountain",
   },
   {
-    src: "/cave.jpeg",
+    src: "/landscapes/cave.jpeg",
     alt: "Painting of a cave",
   },
 ];
@@ -31,7 +31,7 @@ export default function Home() {
     <div>
       <div className="relative items-center justify-items-center min-h-screen">
         <Image
-          src="/moose.jpg"
+          src="/landscapes/moose.jpg"
           alt="Painting of a moose"
           layout="responsive"
           width={500}
@@ -78,7 +78,7 @@ export default function Home() {
         <h2 className="text-4xl text-foreground text-center py-10">aima's bio</h2>
         <div className="row flex items-center justify-center gap-20">
           <Image
-            src="/greenmount.jpeg"
+            src="/landscapes/greenmount.jpeg"
             alt="Painting of a green mountain"
             width={500}
             height={300}
