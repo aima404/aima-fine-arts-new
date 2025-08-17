@@ -1,5 +1,6 @@
 "use client";
 
+import MotionWrapperPage from "@/components/MotionWrapperPage";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -73,6 +74,7 @@ export default function Calligraphy() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-10">
         {paintings.map((painting, index) => (
           <div key={index} onClick={() => setSelectedImage(painting.src)}>
+            <MotionWrapperPage>
             <Image
               src={painting.src}
               alt={painting.alt}
@@ -80,6 +82,7 @@ export default function Calligraphy() {
               height={400}
               className="object-cover rounded-lg w-full h-auto hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
+            </MotionWrapperPage>
             <p className="text-center mt-2">{painting.alt}</p>
           </div>
         ))}

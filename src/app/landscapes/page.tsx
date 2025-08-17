@@ -1,5 +1,6 @@
 "use client";
 
+import MotionWrapperPage from "@/components/MotionWrapperPage";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -31,7 +32,7 @@ export default function Landscapes() {
       },
       {
         src: "/landscapes/girl.jpeg",
-        alt: "8\" x 10\" (Acrylic on canvas)",
+        alt: "8\" x 10\" (Oil on canvas)",
       },
       {
         src: "/landscapes/greenmount.jpeg",
@@ -39,7 +40,7 @@ export default function Landscapes() {
       },
       {
         src: "/landscapes/cow.jpeg",
-        alt: "8\" x 10\" (Acrylic on canvas)",
+        alt: "8\" x 10\" (Oil on canvas)",
       },
       {
         src: "/landscapes/cloud.jpeg",
@@ -97,6 +98,7 @@ export default function Landscapes() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-10">
         {paintings.map((painting, index) => (
           <div key={index} onClick={() => setSelectedImage(painting.src)}>
+            <MotionWrapperPage>
             <Image
               src={painting.src}
               alt={painting.alt}
@@ -105,6 +107,7 @@ export default function Landscapes() {
               className="object-cover rounded-lg w-full h-auto hover:scale-105 transition-transform duration-300 cursor-pointer"
             />
             <p className="text-center mt-2">{painting.alt}</p>
+            </MotionWrapperPage>
           </div>
         ))}
       </div>
