@@ -16,10 +16,10 @@ export default function Navbar() {
   console.log("Current pathname:", pathname);
 
   return (
-    <nav className="text-darkblue relative p-8 text-xl border-b border-foreground">
+    <nav className="text-darkblue relative p-8 text-md md:text-xl border-b border-foreground">
       <div className="flex items-center justify-between padding-container">
         <Link href="/">
-          <h1 className='text-4xl'>aima fine arts</h1>
+          <h1 className='text-xl md:text-4xl'>aima fine arts</h1>
         </Link>
 
         <ul className="gap-4 lg:gap-14 flex">
@@ -29,7 +29,7 @@ export default function Navbar() {
               <li key={link.key}>
               <Link
                 href={link.href}
-                className={`cursor-pointer flex items-center justify-center transition-all hover:underline hover:underline-offset-8 ${
+                className={`cursor-pointer flex items-center justify-center transition-all duration-300 hover:underline hover:underline-offset-8 ${
                 isActive ? 'underline underline-offset-8' : ''
                 }`}
               >

@@ -29,18 +29,17 @@ const carousel = [
 export default function Home() {
   return (
     <div>
-      <div className="relative items-center justify-items-center min-h-screen">
+      <div className="relative">
         <Image
           src="/landscapes/moose.jpg"
           alt="Painting of a moose"
-          layout="responsive"
           width={500}
           height={300}
           className="w-full h-auto"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-5">
-          <h1 className="text-8xl text-white drop-shadow-lg">aima fine arts</h1>
-          <button className="mt-4 px-15 py-5 bg-white text-foreground hover:shadow-xl rounded-xl text-4xl">learn more</button>
+          <h1 className="text-5xl lg:text-8xl text-white drop-shadow-lg">aima fine arts</h1>
+          <button className="mt-4 px-10 py-2 lg:px-16 lg:py-4 bg-white text-foreground hover:shadow-xl rounded-xl text-xl lg:text-4xl">learn more</button>
         </div>
       </div>
       
@@ -71,12 +70,12 @@ export default function Home() {
           <CarouselNext />
         </Carousel>
           
-        <Link href="/landscapes" className="mt-4 px-15 py-5 bg-sage text-white hover:bg-foreground transition-all rounded-xl text-3xl">view more</Link>
+        <Link href="/landscapes" className="mt-4 px-15 py-5 bg-sage text-white hover:bg-foreground transition-all duration-300 rounded-xl text-3xl">view more</Link>
       </div>
 
       <div className="p-20 border-b w-full flex flex-col items-center">
         <h2 className="text-4xl text-foreground text-center py-10">aima's bio</h2>
-        <div className="row flex items-center justify-center gap-20">
+        <div className="row flex items-center justify-center gap-5 md:gap-20">
           <Image
             src="/landscapes/greenmount.jpeg"
             alt="Painting of a green mountain"
