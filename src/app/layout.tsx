@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Chatbot from "@/components/chatbot/Chatbot";
 import MotionWrapper from "@/components/MotionWrapper";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Aima Fine Arts",
@@ -24,6 +25,7 @@ export default async function RootLayout({
           <Footer />
           <Chatbot />
         </MotionWrapper>
+        <Toaster position="top-center" />
       </body>
     </html>
   );
