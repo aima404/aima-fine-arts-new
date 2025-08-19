@@ -1,5 +1,6 @@
 import MotionWrapperPage from "@/components/MotionWrapperPage";
-import { Card, CardContent } from "@/components/ui/card";
+import ReviewForm from "@/components/ReviewForm";
+import Reviews from "@/components/Reviews";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,6 +31,7 @@ const carousel = [
 export default function Home() {
   return (
     <div>
+      <ReviewForm />
       <div className="relative">
         <Image
           src="/landscapes/moose.jpg"
@@ -45,7 +47,7 @@ export default function Home() {
       </div>
       
       <MotionWrapperPage>
-        <div className="py-20 border-b w-full flex flex-col items-center">
+        <div className="py-20 border-b w-full flex flex-col items-center min-h-screen">
           <h2 className="text-4xl text-foreground text-center py-5">photo gallery</h2>
           <Carousel
             opts={{
@@ -77,7 +79,7 @@ export default function Home() {
       </MotionWrapperPage>
 
       <MotionWrapperPage>
-        <div className="p-20 border-b w-full flex flex-col items-center">
+        <div className="p-20 border-b w-full flex flex-col items-center min-h-screen">
           <h2 className="text-4xl text-foreground text-center py-10">aima's bio</h2>
           <div className="row flex items-center justify-center gap-5 md:gap-20">
             <Image
@@ -100,26 +102,7 @@ export default function Home() {
       </MotionWrapperPage>
 
       <MotionWrapperPage>
-        <div className="p-20 border-b w-full flex flex-col items-center">
-          <h2 className="text-4xl text-foreground text-center py-10">reviews</h2>
-          <Carousel className="w-full max-w-10/12">
-            <CarouselContent className="-ml-1">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/4">
-                  <div className="p-1">
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        <span className="text-2xl font-semibold">{index + 1}</span>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious/>
-            <CarouselNext />
-          </Carousel>
-        </div>
+        <Reviews />
       </MotionWrapperPage>
 
     </div>

@@ -63,7 +63,7 @@ export default function ContactForm() {
             <form onSubmit={form.handleSubmit(onSubmit)} className="w-full lg:w-1/2 space-y-6 px-5 py-10 border rounded-xl">
                 <div className="text-center">
                     <h2 className="text-2xl">contact form</h2>
-                    <p>fill out this form and you will receive a response in 1-2 days!</p>
+                    <p>have any questions? fill out this form and receive a response in 1-2 days</p>
                 </div>
                 <div className="flex flex-row gap-6 w-full"> 
                     <div className="w-1/2">
