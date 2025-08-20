@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Chatbot from "../../chatbot/Chatbot";
+import Chatbot from "@/components/Chatbot";
 import MotionWrapper from "@/components/MotionWrapper";
 import { Toaster } from "sonner";
 
