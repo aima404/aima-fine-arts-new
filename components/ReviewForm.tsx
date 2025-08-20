@@ -60,7 +60,7 @@ export default function ReviewForm() {
   return (
     <div>
         <button
-            className="flex text-md rotate-90 p-5 -ml-18 rounded-xl fixed z-50 left-0 bottom-50 text-white bg-foreground hover:bg-sage transition-all duration-300"
+            className="flex text-md rotate-90 p-5 -ml-18 rounded-xl fixed z-50 left-0 bottom-50 text-white bg-sage hover:bg-foreground transition-all duration-300"
             onClick={() => setShowForm(!showForm)}
         >
             <MessageCircle />

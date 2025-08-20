@@ -47,7 +47,7 @@ export default function Home() {
       </div>
       
       <MotionWrapperPage>
-        <div className="py-20 border-b w-full flex flex-col items-center min-h-screen">
+        <div className="py-20 border-b w-full flex flex-col items-center justify-center min-h-screen">
           <h2 className="text-4xl text-foreground text-center py-5">photo gallery</h2>
           <Carousel
             opts={{
@@ -90,12 +90,10 @@ export default function Home() {
               className="w-1/2 px-10"
             />
             <p className="w-1/2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
-              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat 
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
-              officia deserunt mollit anim id est laborum.
+              Aima is a passionate and dedicated young painter based in Texas. Painting has been her language and solace since childhood, a way to capture the beauty of the world and how she views it. 
+              Each stroke of her brush is a step on a journey of exploration, creativity, and self-expression. Her paintings span a variety of subjects and she loves to work with people to achieve their visions.
+              Explore her gallery and learn more about her artistic journey.
+              Feel free to reach out with any questions, collaboration ideas, or just to share your thoughts.
             </p>
           </div>
         </div>

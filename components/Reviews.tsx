@@ -9,7 +9,7 @@ export default async function Reviews() {
         .order("created_at", { ascending: false });
 
     return (
-       <div className="min-h-screen p-4 sm:p-10 md:p-20 border-b w-full flex flex-col items-center">
+        <div className="min-h-screen p-4 sm:p-10 md:p-20 border-b w-full flex flex-col items-center justify-center">
             <h2 className="text-3xl md:text-4xl text-foreground text-center py-6 md:py-10">reviews</h2>
             <Carousel className="w-full max-w-[95%] md:max-w-10/12">
             <CarouselContent className="-ml-1">

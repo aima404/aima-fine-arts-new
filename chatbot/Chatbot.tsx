@@ -1,5 +1,5 @@
 "use client";
-import { MessageSquare } from "lucide-react";
+import { MessageCircleMore } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import ChatInput from "./ui/chat-input";
 
@@ -59,11 +59,14 @@ export default function Chatbot() {
 
   return (
     <div>
-      <MessageSquare 
-        size={80} 
-        className="bg-white p-2 rounded-xl fixed right-12 bottom-[calc(2rem)] cursor-pointer hover:text-sage transition-all duration-300"
+      <div
+        className="fixed right-12 bottom-[2rem] z-50 flex items-center justify-center bg-sage hover:bg-foreground rounded-full p-4 cursor-pointer transition-all duration-300"
+        style={{ boxShadow: "0 2px 8px rgba(0,0,0,0.12)" }}
         onClick={() => setShowChat(!showChat)}
-      />
+      >
+        <MessageCircleMore size={40} className="text-white" />
+      </div>
+      
 
       {showChat && (
           <div className="fixed right-12 bottom-[calc(4rem+1.5rem)] bg-white rounded-xl shadow-lg h-[475px] w-[400px] z-50">
