@@ -2,8 +2,13 @@
 
 import { useState } from 'react';
 
-import { Webchat } from '@botpress/webchat';
 import { MessageCircleMore } from 'lucide-react';
+import dynamic from "next/dynamic";
+
+const Webchat = dynamic(
+  () => import("@botpress/webchat").then(mod => mod.Webchat),
+  { ssr: false }
+);
 
 const clientId = "8677160f-1e52-4219-a59a-8a1b042de06e";
 
