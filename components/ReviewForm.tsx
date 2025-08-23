@@ -60,7 +60,7 @@ export default function ReviewForm() {
   return (
     <div>
         <button
-            className="flex text-md rotate-90 p-5 -ml-18 rounded-xl fixed z-50 left-0 bottom-50 text-white bg-sage hover:bg-foreground transition-all duration-300"
+            className="flex text-md rotate-90 p-3 md:p-5 -ml-18 rounded-xl fixed z-100 left-0 bottom-50 text-white bg-sage hover:bg-foreground transition-all duration-300"
             onClick={() => setShowForm(!showForm)}
         >
             <MessageCircle />
@@ -70,7 +70,7 @@ export default function ReviewForm() {
         {showForm && (
             <form
                 onSubmit={handleSubmit}
-                className="w-1/2 fixed z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center space-y-4 p-10 border rounded-xl shadow-md bg-white"
+                className="w-3/4 md:w-1/2 fixed z-50 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center justify-center space-y-1 md:space-y-4 p-5 md:p-10 border rounded-xl shadow-md bg-white"
             >
                 <div className="text-center">
                     <h2 className="text-lg lg:text-2xl">review form</h2>
@@ -84,7 +84,7 @@ export default function ReviewForm() {
                     </button>
                 </div>
                 
-                <div className="py-5">
+                <div className="py-2 md:py-5">
                     <label className="py-5 lg:text-lg">name</label>
                     <input
                         type="text"
@@ -98,7 +98,7 @@ export default function ReviewForm() {
                 </div>
                 
 
-                <div className="py-5">
+                <div className="py-2 md:py-5">
                     <label className="py-5 lg:text-lg">rating</label>
                     <StarRating 
                         initialRating={initialRatingValue} 
@@ -106,7 +106,7 @@ export default function ReviewForm() {
                     />
                 </div>
                 
-                <div className="py-5">
+                <div className="py-2 md:py-5">
                     <label className="lg:text-lg">review</label>
                     <textarea
                         name="message"

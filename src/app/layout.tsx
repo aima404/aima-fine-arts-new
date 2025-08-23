@@ -23,7 +23,6 @@ export default async function RootLayout({
           <Navbar />
           {children}
           <Footer />
-          <Chatbot />
         </MotionWrapper>
         <Toaster position="top-center" />
       </body>

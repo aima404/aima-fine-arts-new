@@ -1,6 +1,7 @@
 "use client";
 
 import MotionWrapperPage from "@/components/MotionWrapperPage";
+import ScrollToTop from "@/components/ScrollToTop";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
@@ -94,7 +95,8 @@ export default function Landscapes() {
 
   return (
     <div className="items-center justify-items-center min-h-screen p-14">
-      <h1 className="text-5xl">landscapes</h1>
+      <ScrollToTop />
+      <h1 className="text-3xl md:text-5xl">landscapes</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 mt-10">
         {paintings.map((painting, index) => (
           <div key={index} onClick={() => setSelectedImage(painting.src)}>
@@ -114,13 +116,13 @@ export default function Landscapes() {
 
       {selectedImage && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50"
+          className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-100"
           onClick={() => setSelectedImage(null)}
         >
           <div className="relative p-4">
             <button
               onClick={() => setSelectedImage(null)}
-              className="absolute top-4 -right-5 text-white text-5xl font-bold"
+              className="absolute -top-15 right-5 md:-right-5 text-white text-5xl font-bold"
             >
               &times;
             </button>
@@ -128,9 +130,9 @@ export default function Landscapes() {
               src={selectedImage}
               alt="Full screen painting"
               layout="intrinsic"
-              width={1200}
-              height={800}
-              className="object-contain rounded-lg max-w-[90vw] max-h-[90vh]"
+              width={900}
+              height={1200}
+              className="object-contain rounded-lg max-w-[100vw] max-h-[80vh]"
             />
           </div>
         </div>
