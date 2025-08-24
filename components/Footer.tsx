@@ -1,10 +1,11 @@
 "use client"
 import Link from 'next/link';
 import React from 'react';
-import { FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa';
 import { Mail } from 'lucide-react';
 
 const FOOTER_LINKS = [
+  { href: 'https://tiktok.com/@aimafinearts', key: 'tiktok', label: <FaTiktok size={40} /> },
   { href: 'https://instagram.com/aimafinearts', key: 'instagram', label: <FaInstagram size={40} /> },
   { href: 'https://facebook.com/aimafinearts', key: 'facebook', label: <FaFacebook size={40} /> },
   { href: 'mailto:aimafinearts@gmail.com', key: 'email', label: <Mail size={40} /> }

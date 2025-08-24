@@ -23,6 +23,7 @@ export default function App() {
         <Webchat
             clientId={clientId} // Your client ID here
             style={{
+            zIndex: '100',
             width: '400px',
             height: '600px',
             position: 'fixed',

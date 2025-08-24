@@ -1,17 +1,17 @@
-import { FaInstagram, FaFacebook } from 'react-icons/fa';
+import { FaInstagram, FaFacebook, FaTiktok } from 'react-icons/fa';
 import { Mail } from 'lucide-react';
 import ContactForm from '@/components/ContactForm';
 
 const contact = [
   {
+    icon: <FaTiktok size={90} className='p-5 md:p-0' />,
+    handle: "@aimafinearts",
+    link: "https://tiktok.com/@aimafinearts"
+  },
+  {
     icon: <FaInstagram size={90} className='p-5 md:p-0' />,
     handle: "@aimafinearts",
     link: "https://instagram.com/aimafinearts"
-  },
-  {
-    icon: <FaFacebook size={90} className='p-5 md:p-0' />,
-    handle: "@aimafinearts",
-    link: "https://facebook.com/aimafinearts"
   },
   {
     icon: <Mail size={90} className='p-5 md:p-0' />,
